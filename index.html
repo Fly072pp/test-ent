@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENT - Connexion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="login-container">
+            <h1>Connexion à l'ENT</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Mot de passe" required>
+                </div>
+                <div class="input-group">
+                    <select id="role" required>
+                        <option value="eleve">Élève</option>
+                        <option value="enseignant">Enseignant</option>
+                        <option value="admin">Administrateur</option>
+                    </select>
+                </div>
+                <button type="submit" class="login-btn">Se Connecter</button>
+            </form>
+            <p id="error" class="error"></p>
+        </div>
+
+        <!-- Bouton de déconnexion -->
+        <button class="logout-btn">Se Déconnecter</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

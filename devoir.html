@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devoirs à rendre</title>
+  
+  <!-- Styles CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 900px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    td {
+      background-color: #fafafa;
+    }
+
+    .status {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .done {
+      color: green;
+    }
+
+    .pending {
+      color: orange;
+    }
+
+    .overdue {
+      color: red;
+    }
+
+    .btn {
+      padding: 8px 15px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .add-devoir {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .input-devoir {
+      padding: 8px;
+      font-size: 16px;
+      width: 80%;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .add-btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 8px 15px;
+    }
+
+    .add-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Liste des Devoirs</h1>
+    
+
+    <!-- Tableau des devoirs -->
+    <table id="devoirTable">
+      <thead>
+        <tr>
+          <th>Devoir</th>
+          <th>Échéance</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Français - Lecture</td>
+          <td>15 Janvier 2025</td>
+          <td class="status overdue">En retard</td>
+        </tr>
+        <tr>
+          <td>Mathématiques - Exercices</td>
+          <td>17 Janvier 2025</td>
+          <td class="status pending">À faire</td>
+        </tr>
+        <tr>
+          <td>Espagnol - Vocabulaire</td>
+          <td>19 Janvier 2025</td>
+          <td class="status done">Terminé</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <button class="btn" onclick="marquerCommeFait()">Marquer comme fait</button>
+  </div>
+
+  <script>
+    function ajouterDevoir() {
+      var devoirInput = document.getElementById('devoirInput').value;
+      if (devoirInput) {
+        var table = document.getElementById('devoirTable').getElementsByTagName('tbody')[0];
+        var row = table.insertRow(table.rows.length);
+        
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        
+        cell1.innerHTML = devoirInput;
+        cell2.innerHTML = 'À définir'; // Par défaut, la date est à définir
+        cell3.innerHTML = '<span class="status pending">À faire</span>';
+        
+        document.getElementById('devoirInput').value = ''; // Réinitialiser le champ de saisie
+      }
+    }
+
+    function marquerCommeFait() {
+      var rows = document.getElementById('devoirTable').rows;
+      for (var i = 1; i < rows.length; i++) {
+        var statusCell = rows[i].cells[2];
+        if (statusCell.classList.contains('pending')) {
+          statusCell.innerHTML = '<span class="status done">Terminé</span>';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur principal */
+main {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Formulaire de connexion */
+.login-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Groupes d'inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Styles des inputs et select */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus sur les champs */
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #4e73df;
+    outline: none;
+}
+
+/* Style du bouton */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet sur le bouton */
+.login-btn:hover {
+    background-color: #224abe;
+}
+
+/* Message d'erreur */
+.error {
+    color: #e74a3b;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Bouton Déconnexion */
+button.logout-btn {
+    margin-top: 20px;
+    background-color: #e74a3b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Section des cours */
+.courses-container {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.courses-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Cours dans des rectangles arrondis */
+.course-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+}
+
+.course-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4e73df;
+}
+
+.course-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.course-item strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Conteneur de messagerie */
+.messaging-container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Zone de conversation */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.chat-header h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4e73df;
+}
+
+.chat-content {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.message {
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.received {
+    background: #e7f3ff;
+    align-self: flex-start;
+}
+
+.sent {
+    background: #d1e7d1;
+    align-self: flex-end;
+}
+
+/* Zone d'entrée de message */
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rows {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .time-slot {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+  }
+  
+  .course {
+    width: 18%;
+    background-color: #f0f0f0;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .course:nth-child(1) { background-color: lightyellow; }
+  .course:nth-child(2) { background-color: lightblue; }
+  .course:nth-child(3) { background-color: lightgreen; }
+  .course:nth-child(4) { background-color: lightpink; }
+  
+  @media screen and (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .time-slot {
+      flex-direction: column;
+    }
+  
+    .course {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }

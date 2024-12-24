@@ -1,0 +1,22 @@
+{
+    "cours": [
+        {
+            "id": 1,
+            "title": "Mathématiques",
+            "description": "Cours de mathématiques niveau collège.",
+            "teacher": "Mme Dupont"
+        },
+        {
+            "id": 2,
+            "title": "Physique-Chimie",
+            "description": "Introduction à la physique et à la chimie.",
+            "teacher": "M. Bernard"
+        },
+        {
+            "id": 3,
+            "title": "Histoire-Géographie",
+            "description": "Cours sur l'histoire moderne et la géographie.",
+            "teacher": "Mme Martin"
+        }
+    ]
+}

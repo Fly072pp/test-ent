@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messagerie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Tableau de bord</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="chat-container">
+        <div class="chat-content"></div> <!-- Zone pour afficher les messages -->
+
+        <!-- Formulaire de message -->
+        <form>
+            <!-- Sélectionner un destinataire -->
+            <label for="recipient">Destinataire</label>
+            <select id="recipient">
+                <option value="Mme Dupont">Mme Dupont</option>
+                <option value="M. Bernard">M. Bernard</option>
+                <option value="Mme Martin">Mme Martin</option>
+            </select>
+
+            <!-- Zone de saisie du message -->
+            <textarea placeholder="Entrez votre message ici" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
